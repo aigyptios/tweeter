@@ -1,5 +1,5 @@
 
 // Uncomment whichever implementation you'd like to use (just one, though)
 
-require('./index-fetch');
-// require('./index-http-proxy');
+// require('./index-fetch');
+require('./index-http-proxy');
