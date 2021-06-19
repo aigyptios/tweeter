@@ -18,10 +18,10 @@ http.createServer((function(clientRequest, clientResponse) {
 
   const params = new URLSearchParams((new URL(clientRequest.headers.host + clientRequest.url)).search);
   const url = TWITTER_SEARCH_ENDPOINT + '?' + new URLSearchParams(params);
-  console.log('GET', url)
-  clientRequest.headers = {}
-  clientRequest.rawHeaders = {}
-  clientRequest.headers.authorization = `Bearer ${process.env.TOKEN}`;
-  proxy.web(clientRequest, clientResponse, { target: url })
+  console.log(clientRequest.method, url);
+  clientRequest.method = 'GET';
+  clientRequest.headers = {authorization: `Bearer ${process.env.TOKEN}`};
+  clientRequest.rawHeaders = {};
+  proxy.web(clientRequest, clientResponse, { target: url });
 
 })).listen(8080);

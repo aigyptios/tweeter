@@ -10,9 +10,13 @@ http.createServer((function(clientRequest, clientResponse) {
 
   const params = new URLSearchParams((new URL(clientRequest.headers.host + clientRequest.url)).search);
   const url = TWITTER_SEARCH_ENDPOINT + '?' + params;
-  console.log('GET', url)
 
-  fetch(url, { headers: {'Authorization': `Bearer ${process.env.TOKEN}`}})
+  console.log('GET', url);
+
+  fetch(url, { 
+    method: 'GET',
+    headers: {'Authorization': `Bearer ${process.env.TOKEN}`}
+  })
     .then(res => {
       clientResponse.statusCode = res.status;
       return res.json()
