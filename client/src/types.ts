@@ -1,6 +1,8 @@
 interface ISuccessResponse {
   statuses: ITweet[],
-  search_metadata: any
+  search_metadata: {
+    next_results: string
+  }
 }
 interface IErrorResponse {
   errors: {
@@ -24,9 +26,6 @@ export interface ITweet {
     urls: { url: string }[],
     hashtags: {text: string }[]
   }),
-  created_at: string,
-  favorite_count: number,
-  retweet_count: number,
   user: {
     screen_name: string,
     profile_image_url_https: string,

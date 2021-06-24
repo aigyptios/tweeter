@@ -1,12 +1,12 @@
 import { cleanup, render, screen } from '@testing-library/react';
-import { Tweet, parseUrlFromText } from '../components/Tweet';
-import { ITweet } from '../types/types';
+import Tweet, { parseUrlFromText } from './Tweet';
+import { ITweet } from '../../../types';
 
 describe("The Tweet Component", () => {
 
   let mockTweet : ITweet = {
     id: 10000001,
-    text: 'This is the tweet text and at the end of the tweet is sometimes a url like https://t.co/ABCdeFG87J',
+    text: 'This is the tweet text and at the end of the tweet is sometimes a url like... https://t.co/ABCdeFG87J',
     entities: ({
       urls: [{ url: 'https://t.co/ABCdeFG87J' }],
       hashtags: [{text: 'HashtagLifeAmIRite' }]

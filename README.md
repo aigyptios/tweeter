@@ -4,7 +4,7 @@ Welcome to Tweeter! We're glad you're here.
 
 ## Quick Start
 
-### Clone me
+### Clone or download me
 
 ```bash
 git clone [wherever you found this repository]
@@ -30,7 +30,7 @@ node run start
 You can test the server response with the following command (in another terminal)
 
 ```bash
-curl  -G -d 'q=Science' http://localhost:8080/
+curl -G -d 'q=Science' http://localhost:8080/
 ```
 
 ### Run the client
@@ -53,17 +53,32 @@ Hit up <http://localhost:3000> in your favorite browser! <3
 
 - [x] Proxy server
 - [x] Add TypeScript
-- [ ] Add redux
-- [ ] Tests
-- [ ] Tweet component and tests
-- [ ] Search component, functionality, and tests
-- [ ] Filter component, functionality, and tests
-- [ ] Hashtag "pill" component, functionality, and tests
-- [ ] Lazy loading
-- [ ] CSS-in-JS or SCSS
+- [x] Add redux
+- [x] Some Tests
+- [x] Tweet component and tests
+- [x] Search component, functionality, and tests
+- [x] Filter component, functionality, and tests
+- [x] Hashtag "pill" component, functionality, and tests
+- [x] Lazy loading
+- [x] CSS-in-JS or SCSS
 
-### Nice to Have
+### Future Improvements
 
 - [ ] Build script to copy UI build into server
-  - [ ] Modify server to differentiate API endpoints and serve static files
+  - [ ] Modify server to differentiate API endpoints and serve static files (currently the rest "endpoint" doesn't require a resource name like "tweets", just a query)
+- [ ] Pre-load the next five results so the user (1) doesn't have to wait, and (2) the "Load more" button disappears before the query returns empty
+- [ ] Look into better way of loading the next query: it feels strange to have to pass it into the dispatched action (`TweetsList.tsx:23`) since it's already available in the state tree
+- [ ] Refactor `tweetsSlice` to reuse functionality for extracting values (`tweets.all`, `hashtags`, `tweets.filtered`) from API responses
+- [ ] Client-side caching
+- [ ] Refactor CSS-in-JSS for consistency among components, possible extension/inheritance, and more centralized theming
+  - [ ] Use REM units
+
+### Possible UX Enhancements
+
+- [ ] Advanced search filters
+- [ ] Polling on the server to notify client of new tweets available
 - [ ] Make avatars interactive (clickable, preview)
+
+## Questions for UX
+
+- What happens when a user clicks "Load More" when filters are set? Currently they're reset so the user knows more tweets are loaded
