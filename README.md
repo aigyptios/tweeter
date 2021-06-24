@@ -64,19 +64,21 @@ Hit up <http://localhost:3000> in your favorite browser! <3
 
 ### Future Improvements
 
+- [ ] More tests
 - [ ] Build script to copy UI build into server
   - [ ] Modify server to differentiate API endpoints and serve static files (currently the rest "endpoint" doesn't require a resource name like "tweets", just a query)
 - [ ] Pre-load the next five results so the user (1) doesn't have to wait, and (2) the "Load more" button disappears before the query returns empty
 - [ ] Look into better way of loading the next query: it feels strange to have to pass it into the dispatched action (`TweetsList.tsx:23`) since it's already available in the state tree
 - [ ] Refactor `tweetsSlice` to reuse functionality for extracting values (`tweets.all`, `hashtags`, `tweets.filtered`) from API responses
 - [ ] Client-side caching
-- [ ] Refactor CSS-in-JSS for consistency among components, possible extension/inheritance, and more centralized theming
+- [ ] Refactor CSS for consistency/modularity among components, possible extension/inheritance, and more centralized theming
   - [ ] Use REM units, align look and feel more with design
+- [ ] Figure out why `http-proxy` doesn't pass query parameters after `?q=`
 
 ### Possible UX Enhancements
 
-- [ ] Advanced search filters
-- [ ] Polling on the server to notify client of new tweets available
+- [ ] Advanced search filters (especially by language)
+- [ ] Polling on the server and websockets on client to notify user of new tweets available
 - [ ] Make avatars interactive (clickable, preview)
 
 ## Questions for UX
