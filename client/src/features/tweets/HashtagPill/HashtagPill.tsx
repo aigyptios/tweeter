@@ -29,7 +29,11 @@ export default function HashtagPill({ hashtag }: HashtagPillProps) {
   const dispatch = useDispatch();
   const on = useSelector((state: RootState) => state.searchTweets.hashtags[hashtag])
 
-  return <span className={[classes.pill, on ? classes.on : null].join(' ') } onClick={() => dispatch(toggleHashtagFilter(hashtag))}>
-    #{hashtag}
-  </span>;
+  return (
+    <span 
+      className={[classes.pill, on ? classes.on : null].join(' ') } 
+      onClick={() => dispatch(toggleHashtagFilter(hashtag))}>
+      #{hashtag}
+    </span>
+  );
 }

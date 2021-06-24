@@ -71,7 +71,7 @@ Hit up <http://localhost:3000> in your favorite browser! <3
 - [ ] Refactor `tweetsSlice` to reuse functionality for extracting values (`tweets.all`, `hashtags`, `tweets.filtered`) from API responses
 - [ ] Client-side caching
 - [ ] Refactor CSS-in-JSS for consistency among components, possible extension/inheritance, and more centralized theming
-  - [ ] Use REM units
+  - [ ] Use REM units, align look and feel more with design
 
 ### Possible UX Enhancements
 
