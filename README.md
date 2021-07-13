@@ -7,7 +7,7 @@ Welcome to Tweeter! We're glad you're here.
 ### Clone or download me
 
 ```bash
-git clone [wherever you found this repository]
+git clone https://github.com/aigyptios/tweeter.git
 ```
 
 ### Add environment variables
