@@ -11,9 +11,6 @@ describe("The Tweet Component", () => {
       urls: [{ url: 'https://t.co/ABCdeFG87J' }],
       hashtags: [{text: 'HashtagLifeAmIRite' }]
     }),
-    created_at: 'Sat Jun 19 04:34:01 +0000 2021',
-    favorite_count: 12345,
-    retweet_count: 54321,
     user: {
       screen_name: 'Chemistry73',
       profile_image_url_https: 'https://pbs.twimg.com/profile_images/1329647526807543809/2SGvnHYV_normal.jpg',

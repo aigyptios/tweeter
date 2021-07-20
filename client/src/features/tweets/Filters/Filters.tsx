@@ -19,7 +19,7 @@ export default function Filters() {
 
   return <div>
     <h2 className={classes.heading}>Filter by hashtag</h2>
-    {hashtags.length ? hashtags.map(ht => <HashtagPill hashtag={ht} />) : 'No hashtags available.'}
+    {hashtags.length ? hashtags.map((ht, i) => <HashtagPill hashtag={ht} key={i}/>) : 'No hashtags available.'}
   </div>;
 
 }
